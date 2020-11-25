@@ -7,8 +7,8 @@ html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+small, strike, sub, sup, tt, var,
+ u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -475,6 +475,7 @@ body{
 }
 .header{
     position: relative;
+    z-index: 1;
     top: 0;
     background : url(../img/headsmallback.png)no-repeat right bottom , url(../img/headsmallback.png)no-repeat left top;
     background-size: 164px;
@@ -508,14 +509,14 @@ body{
 .dropdown-content {
     display: none;
     position: absolute;
-    left: -220px;
-    min-width: 250px;
+    left: -270px;
+    min-width: 300px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     background-color:rgb(29, 29, 29);
     z-index: 1;
     font-size: 1rem ;
     line-height: 1.5rem;
-    padding:5px 5px;
+    padding:10px 15px;
     border:1px double black;
     
 }
@@ -523,10 +524,11 @@ body{
     text-decoration: none;
     display: block;
     color:white;
+    padding: 5px 0;
     
 }
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: rgb(150, 137, 137);}
+.dropdown-content a:hover {background-color: rgb(155, 150, 150);}
 /* Show the dropdown menu on hover */
 .nav_right:hover .dropdown-content {display: block;}
 .header_ul{
@@ -585,13 +587,14 @@ body{
     max-width: 430px;
     font-size: 2.2rem;
     line-height: 1;
+    margin-bottom: 15px;
     
 }
 .top_text-p{
     max-width: 430px;
     font-size: 1.1rem;
     line-height: 1.6;
-    color:white;
+    color:#FFFFFF;
 }
 
 /* top_content style end */
@@ -730,6 +733,13 @@ body{
     max-width: 815px;
     padding: 40px 120px;
 }
+.form_text p strong{
+    font-size: 45px;
+}
+.form_text p span{
+    font-size: 45px;
+    font-weight: 600;
+}
 .form_text h1{
     font-size: 2.77rem;
     line-height: 0.98;
@@ -761,34 +771,192 @@ body{
 }
 .form_p2{
     margin-bottom: 20px;
+    border-color:#9c8a8a52;
+    border-radius: 5px;
     width: 100%;
     height: 50px;
+    padding-left: 72px;
+    background: url(../img/svg/yellow_circle.svg) no-repeat left 17px top 0px ;
 }
 .form_p3{
     margin-bottom: 28px;
+    border-color:#9c8a8a52;
+    border-radius: 5px;
     width: 100%;
     height: 50px;
+    padding-left: 72px;
+    background: url(../img/svg/white_circle.svg) no-repeat left 17px top 10px, url(../img/svg/Rectangle.svg) no-repeat left ;
 }
 .form_p4{
     margin-bottom: 30px;
     width: 100%;
     height: 50px;
+    font-size: 1.1rem;
+    line-height: 2.25;
     background-color: #F5AF19;
     border-radius: 5px;
     border: none;
     font-weight: 600;
+    color:black;
 }
 .form_p5{
     font-size: 1.1rem;
     line-height: 2.25;
     color: #666666;
 }
+.form_p5 span{
+    font-size: 30px;
+    font-weight: 600;
+    color:black;
+}
 .form_p6{
     font-size: 1rem;
     line-height: 2.25;
     color: #666666;
 }
+/*form style end*/
+/*comments style start*/
+.comments{
+    width: 100%;
+}
+.comments_container{
+    margin-left:90px ;
+    display: flex;
+    flex-direction: row;
+}
+.comments_left{
+    padding-top: 100px;
+    width: 33%;
+    box-sizing: border-box;
+    margin: 0 25px;
+}
+.comments_left h2{
+    font-size: 2.2rem;
+    line-height: 1.2;
+    background: url(../img/Rectangle.png) no-repeat right 135px bottom 0px , url(../img/Rectangle.png) no-repeat left top;
+    padding: 15px 5px;
+    margin-bottom: 15px;
+}
+.vacancy{
+    padding: 23px 21px 23px 17px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 9px rgba(130, 0, 0, 0.3);
+    border-radius: 5px;
+    margin: 30px 0;
+}
+.vacancy h3{
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: #95161B;
+    margin-bottom: 10px;
+}
+.vacancy p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color:  #666666;
+    margin-bottom: 20px;
+}
+.vacancy a {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color:  #666666;
+    text-decoration: none;
+}
+.vacancy a strong{
+    color: black;
+}
+.comments_right{
+    width: 100%;
+    background-color: #F7F7F7;
+    box-sizing: border-box;
+    padding: 100px 100px 0 10px;
+    
+}
+.comments_right-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.comments_right-top h2{
+    font-size: 2.2rem;
+    line-height: 1.2;
+    background: url(../img/Rectangle.png) no-repeat right 0px bottom 0px , url(../img/Rectangle.png) no-repeat left top;
+    padding: 15px 5px;
+    margin-left: 15px;
+    margin-bottom: 50px;
+    
+}
+.comments_right-top button{
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 2.25;
+    padding: 3px 72px;
+    background-color: #F5AF19;
+    border-radius: 5px; 
+    color: black;
+    margin-right: 15px;
+}
+.comments_comments-parent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.comments_comments{
+    width: 50%;
+    padding: 15px 15px;
+}
+.comments_top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+.comments_top p{
+    font-size: 1.3rem;
+    line-height: 1.26;
+}
+.comments_star{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+.comments_star p{
+    font-size: 0.88rem;
+    line-height: 1.46;
+    margin-left: 10px;
+}
+.comments_content h3{
+    font-size: 1.3rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+.comments_content p{
+    font-size: 0.88rem;
+    line-height: 1.46;
+    max-width: 381px;
+}
 
+
+
+@media (max-width:1410px){
+    .form_form {
+        position: static;
+        margin: 20px auto;
+    }
+    .form{
+        padding-bottom: 55px;
+        padding-top: 70px;
+    }
+    .form_content {
+        width: 100%;
+    }
+}
 
 @media (max-width:1366px){
     .top_content{
@@ -838,7 +1006,7 @@ body{
     .top_text-h{
         max-width: none;
         text-align: center;
-        margin-bottom: 10px;
+
     }
     .top_text-p{
         max-width: none;
@@ -877,6 +1045,11 @@ body{
         padding-bottom: 50px;
     }
 }
+@media (max-width:850px){
+    .form_text{
+        padding: 40px 60px;
+    }
+}
 @media (max-width:820px){
     .main_gallery{
         flex-direction: column;
@@ -886,11 +1059,8 @@ body{
         width: 75%;
 
     }
-    .services_wrap{
-        flex-direction: column;
-    }
     .services_gallery{
-        width: 60%;
+        width: 47%;
         margin-left:  auto;
         margin-right: auto;
     }
@@ -905,6 +1075,10 @@ body{
     .top_content{
         min-height: 226px;
     }
+    .top_text-wrap{
+        margin-top: 50px;
+    }
+    
 }
 @media (max-width:733px){
     .top_text{
@@ -912,9 +1086,6 @@ body{
     }
     .top_content {
         min-height: 185px;
-    }
-    .gallery_wrap img{
-        width: 90%;
     }
 }
 @media (max-width:595px){
@@ -933,15 +1104,56 @@ body{
     .services_text{
         padding: 10px;
     }
+    .services_wrap{
+        flex-direction: column;
+    }
+    .services_gallery {
+        width: 80%;
+    }
+}
+@media (max-width:564px){
+    .form_text {
+        padding: 30px 30px;
+    }
+    .form_text h1{
+        font-size:2rem; 
+        margin-bottom: 10px;
+    }
+    .form_text p{
+        font-size: 1rem;
+        line-height: 35px;
+    }
+    .form_text p strong{
+        font-size: 30px;
+    }
+    .form_text p span{
+        font-size: 30px;
+        font-weight: 600;
+    } 
+}
+@media (max-width:505px){
+    .form_form {
+        width: 95%;
+    }
+    .form_p6{
+        line-height: 1.25;
+    }
 }
 @media (max-width:458px){
     .top_content {
         min-height: 160px;
     }
     .services_gallery{
-        width: 80%;
+        width: 100%;
     }
-    
+}
+@media (max-width:420px){
+    .form_form{
+        padding: 20px;
+    }
+    .form_text {
+        padding: 20px 10px;
+    }
 }
 @media (max-width:368px){
     .top_text{
