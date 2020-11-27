@@ -1214,9 +1214,6 @@ body{
     }
 }
 @media (max-width:933px){
-    .services_top h2{
-        background: none;
-    }
     .services{
         padding-top: 50px;
         padding-bottom: 50px;
