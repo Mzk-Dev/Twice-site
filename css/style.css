@@ -819,16 +819,18 @@ body{
 .comments{
     width: 100%;
 }
-.comments_container{
-    margin-left:90px ;
+.comments_parent{
     display: flex;
     flex-direction: row;
 }
 .comments_left{
-    padding-top: 100px;
-    width: 33%;
+    padding:100px 0px 100px 0;
+    width: 35%;
     box-sizing: border-box;
-    margin: 0 25px 100px 25px;
+}
+.comments_left-float{
+    width: 385px;
+    float:right;
 }
 .comments_left h2{
     font-size: 2.2rem;
@@ -839,12 +841,13 @@ body{
     margin-bottom: 15px;
 }
 .vacancy{
-    padding: 25px 20px;
+    padding: 23.5px 19px;
     background: #FFFFFF;
     box-shadow: 0px 0px 9px rgba(130, 0, 0, 0.3);
     border-radius: 5px;
-    margin: 30px 0;
-    min-height: 350px;
+    margin: 30px 25px 30px auto;
+    max-width: 350px;
+    min-height: 335px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -872,11 +875,14 @@ body{
     color: black;
 }
 .comments_right{
-    width: 100%;
+    width: 65%;
     background-color: #F7F7F7;
     box-sizing: border-box;
-    padding: 100px 100px 0 10px;
-    
+    padding: 100px 0 100px 15px;
+}
+.comments_right-float{
+    width: 815px;
+    float: left;
 }
 .comments_right-top{
     display: flex;
@@ -889,7 +895,7 @@ body{
     line-height: 1.2;
     background: url(../img/Rectangle.png) no-repeat right 0px bottom 0px , url(../img/Rectangle.png) no-repeat left top;
     padding: 15px 5px;
-    margin-left: 15px;
+    margin-left: 10px;
     margin-bottom: 50px;
     
 }
@@ -902,7 +908,7 @@ body{
     background-color: #F5AF19;
     border-radius: 5px; 
     color: black;
-    margin-right: 15px;
+    
 }
 .comments_comments-parent{
     display: flex;
@@ -949,8 +955,7 @@ body{
     max-width: 381px;
 }
 .right_pagination{
-    text-align: center;
-    margin:20px 0;
+    margin:55px auto 0 auto;
 }
 .right_pagination img{
     margin:0 9px;
@@ -962,12 +967,12 @@ body{
     color: #F5F5F5;
     padding:5px 0;
 }
-.footer_wrap{
+.wrapper{
     max-width: 1440px;
     margin: 0 auto;
 }
 .footer_cont{
-    margin:0 90px;
+    padding:10px 90px;
 }
 .footer_parent{
     display: flex;
@@ -976,7 +981,7 @@ body{
 }
 .footer_left{
     width: 60%;
-    padding:30px 30px;
+    padding:20px 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1012,7 +1017,7 @@ body{
 }
 .footer_right{
     width: 40%;
-    padding:30px 30px;
+    padding:20px 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1057,27 +1062,16 @@ body{
         background-position: left -300px top 53px;
     }
     .footer_cont {
-        margin: 0 30px;
+        padding: 10px 30px;
     }
 }
-@media (max-width:1263px){
-    .header_li{
-        padding:0;
-    }
-    .top_content{
-        background-position: left -330px top 95px;
-    }
-    .footer_cont {
-        margin: 0 15px;
-    }
-    .container_main{
-        padding:0 15px;
-    }
-}
-@media (max-width:1220px){
-    .comments_container{
-        margin-left: 0px;
+@media (max-width:1300px){
+    .comments_parent {
         flex-direction: column;
+    }
+    .comments_left-float {
+        width: 100%;
+        float: none;
     }
     .comments_left{
         width: 100%;
@@ -1094,8 +1088,9 @@ body{
         margin:0 10px;
     }
     .vacancy{
-        width: 49%;
+        max-width: 49%;
         min-height: 0px;
+        margin:20px 0;
     }
     .comments_right {
         padding: 50px 10px 0 10px;
@@ -1114,16 +1109,34 @@ body{
     .comments_content p{
         max-width: none;
     }
+}
+
+@media (max-width:1263px){
+    .header_li{
+        padding:0;
+    }
+    .top_content{
+        background-position: left -330px top 95px;
+    }
+    .footer_cont {
+        padding: 10px 15px;
+    }
+    .container_main{
+        padding:0 15px;
+    }
+}
+@media (max-width:1220px){
+   
     .footer_parent{
         flex-direction: column;
     }
     .footer_left{
-        padding: 5px 0px;
+        padding: 1px 1px;
         width: 100%;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .footer_right{
-        padding: 0px 0px;
+        padding: 1px 1px;
         width: 100%;
         justify-content: space-between;
     }
@@ -1135,6 +1148,7 @@ body{
         flex-direction: row;
         justify-content: space-between;
     }
+    
     
 
 }
@@ -1192,6 +1206,7 @@ body{
 @media (max-width:1025px){
     .footer_left {
         flex-direction: column;
+        padding:10px;
     }
     .foot_text-left a {
         margin-bottom: 0px;
@@ -1207,6 +1222,7 @@ body{
     .footer_right{
         flex-direction: column;
         text-align: center;
+        padding:10px;
     }
     .foot_numb-right{
         flex-direction: column;
