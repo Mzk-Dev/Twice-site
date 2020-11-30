@@ -600,8 +600,11 @@ body{
 /* top_content style end */
 /*main style start*/
 .main{
-    margin-top:120px;
-    margin-bottom: 150px;
+    padding:120px 0 150px 0;
+}
+.main_wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
 }
 .container_main{
     padding: 0 120px;
@@ -609,7 +612,7 @@ body{
 .main_top{
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
+    justify-content:space-between;
     align-items: end;
 
 }
@@ -634,11 +637,11 @@ body{
     flex-direction: row;
     justify-content: center;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 .gallery_wrap{
     padding: 5px 20px;
     box-sizing: border-box;
-    display: inline-block;
     width: 25%;
     text-align: center;
 }
@@ -663,9 +666,12 @@ body{
 /*main style end*/
 /*sevices style start*/
 .services{
-    padding-top: 120px;
-    padding-bottom: 100px;
+    padding:120px 0 100px 0;
     background-color:  #F7F7F7;;
+}
+.service_wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
 }
 .services_top h2{
     font-size: 2.2rem;
@@ -915,7 +921,6 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 65px;
 }
 .comments_comments{
     width: 50%;
@@ -1076,7 +1081,7 @@ body{
     .comments_left{
         width: 100%;
         margin: 0 auto;
-        padding-top: 75px;
+        padding: 100px 10px 50px 10px;
     }
     .comments_left h2{
         margin: 0 auto;
@@ -1085,7 +1090,6 @@ body{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        margin:0 10px;
     }
     .vacancy{
         max-width: 49%;
@@ -1093,7 +1097,12 @@ body{
         margin:20px 0;
     }
     .comments_right {
-        padding: 50px 10px 0 10px;
+        padding: 50px 10px 100px 10px;
+        width: 100%;
+    }
+    .comments_right-float{
+        float: none;
+        width: 100%;
     }
     .comments_right-top button {
         display: none;
@@ -1103,7 +1112,7 @@ body{
 
     }
     .comments_comments{
-        width: 45%;
+        width: 50%;
         margin: 0 auto;
     }
     .comments_content p{
@@ -1199,8 +1208,20 @@ body{
         margin-bottom: 20px;
     }
     .main {
-        margin-top: 50px;
-        margin-bottom: 50px;
+        padding:100px 0 50px 0;
+    }
+    .services{
+        padding:50px 0 100px 0;
+    }
+}
+@media (max-width:1050px){
+    .services_gallery{
+        width: 49%;
+        margin-left:  auto;
+        margin-right: auto;
+    }
+    .gallery_wrap{
+        width: 50%;
     }
 }
 @media (max-width:1025px){
@@ -1229,30 +1250,9 @@ body{
         width: 100%;
     }
 }
-@media (max-width:933px){
-    .services{
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-}
 @media (max-width:850px){
     .form_text{
         padding: 40px 60px;
-    }
-}
-@media (max-width:820px){
-    .main_gallery{
-        flex-direction: column;
-    }
-    .gallery_wrap{
-        margin: 10px auto;
-        width: 75%;
-
-    }
-    .services_gallery{
-        width: 47%;
-        margin-left:  auto;
-        margin-right: auto;
     }
 }
 @media (max-width:789px){
@@ -1280,16 +1280,13 @@ body{
 }
 @media (max-width:595px){
     .main{
-        margin-bottom: 25px;
+        padding: 50px 0 50px 0;
     }
     .main_gallery{
         margin-top: 20px;
     }
     .gallery_wrap img{
         margin-bottom: 10px;
-    }
-    .services{
-        padding-top:25px;
     }
     .services_text{
         padding: 10px;
@@ -1298,13 +1295,13 @@ body{
         flex-direction: column;
     }
     .services_gallery {
-        width: 80%;
+        width: 90%;
     }
     .vacancy_parent{
         flex-direction: column;
     }
     .vacancy{
-        width: 90%;
+        max-width: 100%;
         margin: 15px auto;
     }
     .comments_left h2{
@@ -1315,14 +1312,24 @@ body{
         margin-bottom: 40px;
     }
     .comments_comments {
-        width: 90%;
+        width: 100%;
         margin:5px auto;
     }
     .comments_left {
-        padding-top: 50px;
+        padding: 50px 10px 25px 10px;
     }
     .comments_right {
-        padding: 35px 10px 0 10px;
+        padding: 25px 10px 50px 10px;
+    }
+    .main_gallery{
+        flex-direction: column;
+    }
+    .gallery_wrap{
+        margin: 10px auto;
+        width: 100%;
+    }
+    .services {
+        padding: 50px 0 50px 0;
     }
 
 }
@@ -1381,9 +1388,6 @@ body{
 @media (max-width:368px){
     .top_text{
         padding:10px;
-    }
-    .main_gallery {
-        margin-top: 0px;
     }
     .gallery_wrap p {
         margin-bottom: 0px;
