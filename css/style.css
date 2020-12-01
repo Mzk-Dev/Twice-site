@@ -516,7 +516,7 @@ body{
     z-index: 1;
     font-size: 1rem ;
     line-height: 1.5rem;
-    padding:10px 15px;
+    padding: 5px 5px;
     border:1px double black;
     
 }
@@ -524,7 +524,7 @@ body{
     text-decoration: none;
     display: block;
     color:white;
-    padding: 5px 0;
+    padding: 5px 10px;
     
 }
 /* Change color of dropdown links on hover */
